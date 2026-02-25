@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent { label 'docker-agent' }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/fredericEducentre/landing-page-example.git'
+                git branch: 'main', url: 'https://github.com/Jaouaher999/landing-page-example'
             }
         }
         stage('Deploy') {
